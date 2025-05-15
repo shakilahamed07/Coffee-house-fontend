@@ -8,6 +8,8 @@ import MainLayouts from '../Layouts/MainLayouts';
 import AddCoffee from '../Pages/AddCoffee';
 import UpdateCoffee from '../Pages/UpdateCoffee';
 import Coffee_details from '../Pages/Coffee_details';
+import SignIn from '../Pages/SignIn';
+import SignUp from '../Pages/SignUp';
 
   export const router = createBrowserRouter([
     {
@@ -34,7 +36,15 @@ import Coffee_details from '../Pages/Coffee_details';
           path: '/update-coffee/:id',
           loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`),
           Component: UpdateCoffee
-        }
+        },
+        {
+          path: '/sign-up',
+          Component: SignUp
+        },
+        {
+          path: '/sign-in',
+          Component: SignIn
+        },
       ]
     },
   ]);
