@@ -10,6 +10,7 @@ import UpdateCoffee from '../Pages/UpdateCoffee';
 import Coffee_details from '../Pages/Coffee_details';
 import SignIn from '../Pages/SignIn';
 import SignUp from '../Pages/SignUp';
+import AllUsers from '../Pages/AllUsers';
 
   export const router = createBrowserRouter([
     {
@@ -44,6 +45,11 @@ import SignUp from '../Pages/SignUp';
         {
           path: '/sign-in',
           Component: SignIn
+        },
+        {
+          path: '/all-users',
+          loader: ()=>fetch('http://localhost:3000/users'),
+          Component: AllUsers
         },
       ]
     },
