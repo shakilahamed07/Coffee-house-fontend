@@ -12,7 +12,7 @@ const AddCoffee = () => {
         const newCoffee =  Object.fromEntries(formData.entries())
 
         //* POST database
-        fetch('http://localhost:3000/coffees', {
+        fetch('https://coffey-house-backend.vercel.app/coffees', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

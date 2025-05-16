@@ -25,7 +25,7 @@ const SignUp = () => {
             console.log(userProfile)
 
             //* Database add user
-            fetch('http://localhost:3000/users', {
+            fetch('https://coffey-house-backend.vercel.app/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

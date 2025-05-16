@@ -21,7 +21,7 @@ import AllUsers from '../Pages/AllUsers';
         {
           index: true,
           path:'/',
-          loader: ()=> fetch('http://localhost:3000/coffees'),
+          loader: ()=> fetch('https://coffey-house-backend.vercel.app/coffees'),
           Component: Home
         },
         {
@@ -30,12 +30,12 @@ import AllUsers from '../Pages/AllUsers';
         },
         {
           path: '/coffee-details/:id',
-          loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`),
+          loader: ({params})=> fetch(`https://coffey-house-backend.vercel.app/coffees/${params.id}`),
           Component: Coffee_details
         },
         {
           path: '/update-coffee/:id',
-          loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`),
+          loader: ({params})=> fetch(`https://coffey-house-backend.vercel.app/coffees/${params.id}`),
           Component: UpdateCoffee
         },
         {
@@ -48,7 +48,7 @@ import AllUsers from '../Pages/AllUsers';
         },
         {
           path: '/all-users',
-          loader: ()=>fetch('http://localhost:3000/users'),
+          loader: ()=>fetch('https://coffey-house-backend.vercel.app/users'),
           Component: AllUsers
         },
       ]
